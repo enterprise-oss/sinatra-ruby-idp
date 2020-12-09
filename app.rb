@@ -9,7 +9,11 @@ class App < Sinatra::Base
     erb :index
   end
 
-  post '/' do
+  get '/saml-login' do
+    erb :login
+  end
+
+  post '/saml-login' do
     decode_request(params[:SAMLRequest])
 
     @saml_response = encode_response(fake_user)

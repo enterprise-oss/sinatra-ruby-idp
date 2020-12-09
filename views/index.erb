@@ -1,17 +1,2 @@
-<% form_tag('/') do %>
-  <%= hidden_field_tag("SAMLRequest", { value: params[:SAMLRequest] }) %>
-
-  <p>
-    <%= label_tag :email %>
-    <%= text_field_tag( :email, :autocapitalize => "off", :autocorrect => "off", :autofocus => "autofocus", :spellcheck => "false", :size => 30, :class => "email_pwd txt" )%>
-  </p>
-
-  <p>
-    <%= label_tag :password %>
-    <%= password_field_tag :password, :autocapitalize => "off", :autocorrect => "off", :spellcheck => "false", :size => 30, :class => "email_pwd txt" %>
-  </p>
-
-  <p>
-    <%= submit_tag "Sign in", :class => "button big blueish" %>
-  </p>
-<% end %>
+<p>This is our fake IDP</p>
+<p>You probably didn't mean to come here!</p>

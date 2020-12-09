@@ -1,4 +1,4 @@
-<% form_tag('/') do %>
+<% form_tag('/saml-login') do %>
   <%= hidden_field_tag("SAMLRequest", { value: params[:SAMLRequest] }) %>
 
   <p>

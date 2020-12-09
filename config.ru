@@ -14,8 +14,6 @@ Bundler.require
 require './app'
 
 SamlIdp.configure do |config|
-  base = "http://example.com"
-
   config.x509_certificate = <<-CERT
 -----BEGIN CERTIFICATE-----
 MIIDtjCCAp4CCQCkrp2ger3dDzANBgkqhkiG9w0BAQsFADCBnDELMAkGA1UEBhMC
@@ -71,7 +69,6 @@ s5KE/wRHVCznRNcjx69MmeZLuMHikLvTxYxqJCgSj6StbdI3b6RXpw==
 -----END RSA PRIVATE KEY-----
 CERT
   
-  config.signed_message = true
   config.name_id.formats = {
     email_address: -> (principal) { principal.email_address },
     transient: -> (principal) { principal.id },

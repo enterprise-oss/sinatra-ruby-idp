@@ -2,7 +2,7 @@
 
 This Sinatra app is a simplified Identity Provider for CI, QA and demo purposes.
 
-It runs in production at https://idp.ossoapp.io and can be used by anyone - it doesn't record anything.
+It runs in production at https://idp-osso.herokuapp.com and can be used by anyone - it doesn't record anything.
 
 Use [this metadata](metadata.xml) to configure a service provider.
 

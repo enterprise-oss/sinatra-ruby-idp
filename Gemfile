@@ -5,3 +5,8 @@ gem 'saml_idp'
 gem 'sinatra'
 gem 'sinatra_more', require: 'sinatra_more/markup_plugin'
 gem 'xmlenc'
+
+group :development, :test do
+  gem 'dotenv'
+  gem 'pry'
+end

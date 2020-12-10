@@ -5,11 +5,15 @@ class App < Sinatra::Base
   register SinatraMore::MarkupPlugin
   include SamlIdp::Controller
 
+  get '/' do
+    erb :index
+  end
+
   get '/saml-login' do
     erb :login
   end
 
-  post '/saml-login' do    
+  post '/saml-login' do
     decode_request(params[:SAMLRequest])
 
     @saml_response = encode_response(fake_user)

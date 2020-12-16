@@ -9,7 +9,6 @@ class App < Sinatra::Base
   include SamlIdp::Controller
 
   get '/' do
-    puts id
     erb :index
   end
 

@@ -1,11 +1,15 @@
 require 'securerandom'
 require 'sinatra/base'
+require 'sinatra_more/markup_plugin'
+require 'redis-sinatra'
 
 class App < Sinatra::Base
   register SinatraMore::MarkupPlugin
+  register Sinatra::Cache
   include SamlIdp::Controller
 
   get '/' do
+    puts id
     erb :index
   end
 
@@ -30,9 +34,13 @@ class App < Sinatra::Base
   private
 
   def fake_user
+    
+    email_address = params[:email]
+    id = settings.cache.fetch(email_address) { SecureRandom.uuid }
+
     OpenStruct.new({
-      id: SecureRandom.uuid,
-      email_address: params[:email],
+      email_address: email_address,
+      id: id,
     })
   end
 end

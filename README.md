@@ -2,7 +2,9 @@
 
 This Sinatra app is a simplified Identity Provider for CI, QA and demo purposes.
 
-It runs in production at https://idp-osso.herokuapp.com and can be used by anyone - it doesn't record anything.
+It runs in production at https://idp-osso.herokuapp.com and can be used by anyone.
+
+A redis instance records email addresses and UUIDs in order to provide consistent IDs for an email address, but you can use any fake email address and any password.
 
 Use [this metadata](metadata.xml) to configure a service provider.
 

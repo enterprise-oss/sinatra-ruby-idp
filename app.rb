@@ -34,7 +34,6 @@ class App < Sinatra::Base
   private
 
   def fake_user
-    
     email_address = params[:email]
     id = settings.cache.fetch(email_address) { SecureRandom.uuid }
 

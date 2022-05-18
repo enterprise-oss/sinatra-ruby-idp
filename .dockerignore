@@ -1,0 +1,5 @@
+.git
+vendor/bundle
+node_modules
+Dockerfile
+public/styles

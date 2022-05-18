@@ -1,15 +1,14 @@
-# frozen_string_literal: true
-
 require 'rubygems'
-require 'bundler/setup'
-
-
-if ENV['RACK_ENV'].nil? || ENV['RACK_ENV'] == 'development'
-  require 'dotenv/load'
-  require 'pry'
-end
-
+require 'bundler'
 Bundler.require
+#Ruby function to check directory or file existence
+if(File.exist?("config/application.yml"))
+  puts "loading configuration from config/application.yml"
+  Figaro.application = Figaro::Application.new(
+    path: File.expand_path("config/application.yml")
+  )
+  Figaro.load
+end
 
 require './app'
 
@@ -68,7 +67,7 @@ LvPbkF43KLZX2lr5axMd1G4O0lc3omn7zu5ighrEd7Aqyxyjd3+HKNP57fd+Lm/o
 s5KE/wRHVCznRNcjx69MmeZLuMHikLvTxYxqJCgSj6StbdI3b6RXpw==
 -----END RSA PRIVATE KEY-----
 CERT
-  
+
   config.name_id.formats = {
     email_address: -> (principal) { principal.email_address },
     transient: -> (principal) { principal.id },
@@ -85,4 +84,4 @@ CERT
   }
 end
 
-run App
+run MockSamlIdpApp

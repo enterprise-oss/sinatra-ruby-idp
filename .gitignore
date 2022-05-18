@@ -1,3 +1,9 @@
 certificate.pem
 csr.csr
 key.pem
+node_modules
+# Built assets
+public/styles/**
+public/index.*
+
+.DS_Store

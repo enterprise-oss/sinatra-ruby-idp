@@ -2,6 +2,10 @@
 
 This Sinatra app is a simplified Identity Provider for CI, QA and demo purposes.
 
+
+https://user-images.githubusercontent.com/783501/168935031-caab559e-7b5d-4056-96d6-f3f96d584499.mov
+
+
 ## Changes from original version
 
 - React frontend

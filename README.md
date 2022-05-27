@@ -35,4 +35,4 @@ https://user-images.githubusercontent.com/783501/168935031-caab559e-7b5d-4056-96
 5. [Enjoy](http://127.0.0.1:9292) 🎈
 
 Credit to [saml_idp/saml_idp](https://github.com/saml-idp/saml_idp)
-image.png and [enterprise-oss/sinatra-ruby-idp][https://github.com/enterprise-oss/sinatra-ruby-idp]
+ and [enterprise-oss/sinatra-ruby-idp](https://github.com/enterprise-oss/sinatra-ruby-idp)
